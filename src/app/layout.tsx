@@ -47,7 +47,7 @@ export default async function RootLayout({
           </div>
         </nav>
         <div className="p-5 flex justify-center">
-          <Providers>{children}</Providers>
+          <Providers>{children} </Providers>
         </div>
       </body>
     </html>
