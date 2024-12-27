@@ -4,11 +4,12 @@ import Image from "next/image";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth_options";
 import SignOutButton from "../login/sign_out_button";
+import Link from "next/link";
 
 export default async function Navbar() {
   const session = await getServerSession(authOptions);
   return (
-    <a href="/" className="flex flex-col">
+    <Link href="/" className="flex flex-col">
       <div className="text-5xl space-x-2 flex items-center">
         <Image
           width={30}
@@ -29,6 +30,6 @@ export default async function Navbar() {
         />
       </div>
       {session ? <SignOutButton /> : <SignInButton provider="google" />}
-    </a>
+    </Link>
   );
 }

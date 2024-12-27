@@ -3,6 +3,7 @@ import { Quote } from "@prisma/client";
 import Image from "next/image";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Link from "next/link";
 
 export default function QuoteCard({ quote }: { quote: Quote }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -48,13 +49,13 @@ export default function QuoteCard({ quote }: { quote: Quote }) {
               {new Date(quote.date_published).toLocaleDateString()}
             </p>
             <p className="capitalize">{quote.type}</p>
-            <a
+            <Link
               href={quote.link}
               className="text-blue-900 hover:underline"
               onClick={(e) => e.stopPropagation()}
             >
               {quote.link}
-            </a>
+            </Link>
           </div>
 
           {quote.tags && quote.tags.length > 0 && (

@@ -3,7 +3,6 @@ import { Neuton } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import React from "react";
-import { SearchBar } from "@/modules/navigation/searchbar";
 import Navbar from "@/modules/navigation/navbar";
 import Providers from "./providers";
 
