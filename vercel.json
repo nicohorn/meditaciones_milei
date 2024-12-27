@@ -1,9 +1,10 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "next.config.js",
-      "use": "@vercel/next"
+      "source": "/(.*)",
+      "destination": "/"
     }
-  ]
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
